@@ -22,7 +22,7 @@ def transplant(exif_src, image, new_file=None, include_iptc=False):
     if exif is None:
         raise ValueError("not found exif in input")
 
-    iptc = get_iptc_seg(segments) if include_iptc else b"
+    iptc = get_iptc_seg(segments) if include_iptc else b""
 
     output_file = False
     if image[0:2] == b"\xff\xd8":
